@@ -1,0 +1,13 @@
+﻿  pch.cpp
+  dllmain.cpp
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(94,261): warning C4244: '=': 'UINT64' から 'UINT32' への変換です。データが失われる可能性があります。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(129,254): warning C4312: '型キャスト': 'UINT32' からより大きいサイズの 'char *' へ変換します。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(129,256): warning C4311: '型キャスト': ポインターを 'FARPROC' から 'UINT32' へ切り詰めます。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(129,256): warning C4302: '型キャスト': 'FARPROC' から 'UINT32' へ切り詰めます。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(28,15): warning C4101: 'buff4pecl': ローカル変数は 1 度も使われていません。
+     ライブラリ C:\Users\hiroki_repo\source\repos\ULDllLoader\x64\Release\ULDllLoader.lib とオブジェクト C:\Users\hiroki_repo\source\repos\ULDllLoader\x64\Release\ULDllLoader.exp を作成中
+  コード生成しています。
+  Previous IPDB not found, fall back to full compilation.
+  All 4 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  コード生成が終了しました。
+  ULDllLoader.vcxproj -> C:\Users\hiroki_repo\source\repos\ULDllLoader\x64\Release\ULDllLoader.dll
