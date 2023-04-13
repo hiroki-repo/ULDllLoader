@@ -1,4 +1,5 @@
-﻿  dllmain.cpp
+﻿  pch.cpp
+  dllmain.cpp
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(175,51): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(176,79): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(31,15): warning C4101: 'buff4pecl': ローカル変数は 1 度も使われていません。

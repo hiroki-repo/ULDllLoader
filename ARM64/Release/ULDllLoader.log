@@ -1,4 +1,5 @@
-﻿  dllmain.cpp
+﻿  pch.cpp
+  dllmain.cpp
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(139,292): warning C4312: '型キャスト': 'UINT32' からより大きいサイズの 'LPCSTR' へ変換します。
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(139,294): warning C4311: '型キャスト': ポインターを 'FARPROC' から 'UINT32' へ切り詰めます。
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(139,294): warning C4302: '型キャスト': 'FARPROC' から 'UINT32' へ切り詰めます。
