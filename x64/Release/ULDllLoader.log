@@ -1,14 +1,15 @@
-﻿  dllmain.cpp
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(139,292): warning C4312: '型キャスト': 'UINT32' からより大きいサイズの 'LPCSTR' へ変換します。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(139,294): warning C4311: '型キャスト': ポインターを 'FARPROC' から 'UINT32' へ切り詰めます。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(139,294): warning C4302: '型キャスト': 'FARPROC' から 'UINT32' へ切り詰めます。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(142,298): warning C4311: '型キャスト': ポインターを 'FARPROC' から 'UINT32' へ切り詰めます。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(142,298): warning C4302: '型キャスト': 'FARPROC' から 'UINT32' へ切り詰めます。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(162,292): warning C4312: '型キャスト': 'UINT32' からより大きいサイズの 'LPCSTR' へ変換します。
+﻿  pch.cpp
+  dllmain.cpp
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(146,292): warning C4312: '型キャスト': 'UINT32' からより大きいサイズの 'LPCSTR' へ変換します。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(146,294): warning C4311: '型キャスト': ポインターを 'FARPROC' から 'UINT32' へ切り詰めます。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(146,294): warning C4302: '型キャスト': 'FARPROC' から 'UINT32' へ切り詰めます。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(149,298): warning C4311: '型キャスト': ポインターを 'FARPROC' から 'UINT32' へ切り詰めます。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(149,298): warning C4302: '型キャスト': 'FARPROC' から 'UINT32' へ切り詰めます。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(169,292): warning C4312: '型キャスト': 'UINT32' からより大きいサイズの 'LPCSTR' へ変換します。
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(31,15): warning C4101: 'buff4pecl': ローカル変数は 1 度も使われていません。
      ライブラリ C:\Users\hiroki_repo\source\repos\ULDllLoader\x64\Release\ULDllLoader.lib とオブジェクト C:\Users\hiroki_repo\source\repos\ULDllLoader\x64\Release\ULDllLoader.exp を作成中
   コード生成しています。
-  1 of 4 functions (25.0%) were compiled, the rest were copied from previous compilation.
+  1 of 5 functions (20.0%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   コード生成が終了しました。

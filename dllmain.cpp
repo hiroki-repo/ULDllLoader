@@ -45,7 +45,14 @@ extern "C" {
             ReadFile(fh, buff0, 4096, &tmp, 0);
             SetFilePointer(fh, 0, 0, 0);
             //buff4pe = (char*)malloc((*(UINT32*)(&buff0[0x1c])) + (*(UINT32*)(&buff0[0x20])) + (*(UINT32*)(&buff0[0x24])));
-            buff4pe = (char*)malloc((*(UINT32*)(&buff0[0x50]))+4096);
+            if ((*(UINT16*)(&buff0[0x18])) == 0x10b) {
+                baseaddr = (*(UINT32*)(&buff0[0x34]));
+            }
+            else if ((*(UINT16*)(&buff0[0x18])) == 0x20b) {
+                baseaddr = (*(UINT64*)(&buff0[0x30]));
+            }
+            buff4pe = (char*)VirtualAlloc((LPVOID)baseaddr,(*(UINT32*)(&buff0[0x50]))+4096,0x3000,0x40);//malloc((*(UINT32*)(&buff0[0x50]))+4096);
+            if (buff4pe == 0) { buff4pe = (char*)VirtualAlloc(0, (*(UINT32*)(&buff0[0x50])) + 4096, 0x3000, 0x40); if (buff4pe == 0) { return 0; } }
             memcpy(buff4pe, buff0, 4096);
             if ((*(UINT16*)(&buff0[0x18])) == 0x10b) {
                 //32bit
@@ -87,7 +94,7 @@ extern "C" {
             UINT32 armlo_ = 0;
             UINT64 deltatmp;
             HMODULE HM = 0;
-            if (reloc == 0) { CloseHandle(fh); free(buff4pe); return 0; }
+            //if (reloc == 0) { CloseHandle(fh); free(buff4pe); return 0; }
 
 loop4relocate:
             cnt = 0;
@@ -213,6 +220,7 @@ loop4relocate:
         }
         return AddrOfFunctionaly;
     }
+    __declspec(dllexport) DWORD ULFreeLibrary(void* prm_0) { return VirtualFree(prm_0, 0, 0x8000); }
 #ifdef __cplusplus
 }
 #endif
