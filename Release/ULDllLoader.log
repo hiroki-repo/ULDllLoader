@@ -1,11 +1,11 @@
 ﻿  pch.cpp
   dllmain.cpp
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(182,51): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(183,79): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(208,51): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
+C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(209,79): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
 C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(31,15): warning C4101: 'buff4pecl': ローカル変数は 1 度も使われていません。
      ライブラリ C:\Users\hiroki_repo\source\repos\ULDllLoader\Release\ULDllLoader.lib とオブジェクト C:\Users\hiroki_repo\source\repos\ULDllLoader\Release\ULDllLoader.exp を作成中
   コード生成しています。
-  1 of 5 functions (20.0%) were compiled, the rest were copied from previous compilation.
+  2 of 6 functions (33.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   コード生成が終了しました。

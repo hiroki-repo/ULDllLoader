@@ -39,7 +39,7 @@ extern "C" {
         UINT64 textaddr = 0;
         UINT64 textaddrsize = 0;
         DWORD tmp;
-        if (fh = CreateFileA(prm_0, GENERIC_READ, 3, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0)) {
+        if ((fh = CreateFileA(prm_0, GENERIC_READ, 3, 0, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, 0)) != INVALID_HANDLE_VALUE) {
             ReadFile(fh, buff0, 512, &tmp, 0);
             SetFilePointer(fh, (*(UINT32*)(&buff0[0x3c])), 0, 0);
             ReadFile(fh, buff0, 4096, &tmp, 0);
@@ -137,7 +137,20 @@ loop4relocate:
                 while ((*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20))) != 0) {
                     cnt2 = 0;
                     if ((*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20) + 12)) != 0) {
-                        HM = LoadLibraryA(((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20) + 12)))));
+                        HM = 0;
+                        char fname64bit[4096];
+                        strcpy(fname64bit, prm_0);
+                        char* p = strrchr(fname64bit, '\\');
+                        if ((UINT64)p <= (UINT64)&fname64bit) {
+                            if (p) {
+                                if (p) { *++p = 0; }
+                                strncat(fname64bit, ((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20) + 12)))), strlen(((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20) + 12))))));
+                                HM = LoadLibraryA(fname64bit);
+                            }
+                        }
+                        if (HM == 0) {
+                            HM = LoadLibraryA(((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20) + 12)))));
+                        }
                     }
                     if (HM != 0) {
                         while ((*(UINT32*)(buff4pe + (cnt2 * 4) + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20) + 16)))) != 0) {//&& (*(UINT32*)(buff4pe + (cnt2 * 4) + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x80])) + (cnt * 20) + 0)))) != 0) {
@@ -160,7 +173,20 @@ loop4relocate:
                 while ((*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20))) != 0) {
                     cnt2 = 0;
                     if ((*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20) + 12)) != 0) {
-                        HM = LoadLibraryA(((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20) + 12)))));
+                        HM = 0;
+                        char fname64bit[4096];
+                        strcpy(fname64bit, prm_0);
+                        char *p=strrchr(fname64bit,'\\');
+                        if ((UINT64)p <= (UINT64)&fname64bit) {
+                            if (p) {
+                                if (p) { *++p = 0; }
+                                strncat(fname64bit, ((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20) + 12)))), strlen(((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20) + 12))))));
+                                HM = LoadLibraryA(fname64bit);
+                            }
+                        }
+                        if (HM == 0) {
+                            HM = LoadLibraryA(((char*)(buff4pe + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20) + 12)))));
+                        }
                     }
                     if (HM != 0) {
                         while ((*(UINT32*)(buff4pe + (cnt2 * 4) + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20) + 16)))) != 0 && (*(UINT32*)(buff4pe + (cnt2 * 4) + (*(UINT32*)(buff4pe + (*(UINT32*)(&buff0[0x90])) + (cnt * 20) + 0)))) != 0) {
