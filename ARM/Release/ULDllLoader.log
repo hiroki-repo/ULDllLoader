@@ -1,9 +1,9 @@
 ﻿  pch.cpp
   dllmain.cpp
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(208,51): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(209,79): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
-C:\Users\hiroki_repo\source\repos\ULDllLoader\dllmain.cpp(31,15): warning C4101: 'buff4pecl': ローカル変数は 1 度も使われていません。
-     ライブラリ C:\Users\hiroki_repo\source\repos\ULDllLoader\ARM\Release\ULDllLoader.lib とオブジェクト C:\Users\hiroki_repo\source\repos\ULDllLoader\ARM\Release\ULDllLoader.exp を作成中
+C:\Users\hirok\ULDllLoader-main\dllmain.cpp(209,51): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
+C:\Users\hirok\ULDllLoader-main\dllmain.cpp(210,79): warning C4244: '引数': 'UINT64' から 'SIZE_T' への変換です。データが失われる可能性があります。
+C:\Users\hirok\ULDllLoader-main\dllmain.cpp(31,15): warning C4101: 'buff4pecl': ローカル変数は 1 度も使われていません。
+     ライブラリ C:\Users\hirok\ULDllLoader-main\ARM\Release\ULDllLoader.lib とオブジェクト C:\Users\hirok\ULDllLoader-main\ARM\Release\ULDllLoader.exp を作成中
   コード生成しています。
   コード生成が終了しました。
-  ULDllLoader.vcxproj -> C:\Users\hiroki_repo\source\repos\ULDllLoader\ARM\Release\ULDllLoader.dll
+  ULDllLoader.vcxproj -> C:\Users\hirok\ULDllLoader-main\ARM\Release\ULDllLoader.dll

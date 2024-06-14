@@ -94,7 +94,7 @@ extern "C" {
             UINT32 armlo_ = 0;
             UINT64 deltatmp;
             HMODULE HM = 0;
-            //if (reloc == 0) { CloseHandle(fh); free(buff4pe); return 0; }
+            if (reloc == 0) { goto bypassreloc; }
 
 loop4relocate:
             cnt = 0;
@@ -131,6 +131,7 @@ loop4relocate:
             tmp4relocptx += (*(UINT32*)(reloc + (tmp4relocptx - 4)));
             if ((*(UINT32*)(reloc + (tmp4relocptx - 4))) != 0)
                 goto loop4relocate;
+bypassreloc:
             cnt = 0;
             if ((*(UINT16*)(&buff0[0x18])) == 0x10b) {
                 //32bit
